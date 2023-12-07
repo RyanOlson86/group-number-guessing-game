@@ -11,6 +11,14 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>YOUR GAME HERE!</h1>
+    <h1>Number Guessing Game</h1>
+    <form id="formInputs" onsubmit="handleSubmit(event)">
+      <input id="nameOneInput" type="text" placeholder="Name">
+      <input id="numberOneInput" type="number" placeholder="Guess">
+      <br>
+      <input id="nameTwoInput" type="text" placeholder="Name">
+      <input id="numberTwoInput" type="number" placeholder="Guess">
+      <button id="submitButton">Submit</button>
+    </form>
 </body>
 </html>
