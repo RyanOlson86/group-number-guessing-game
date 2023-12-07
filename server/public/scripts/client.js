@@ -68,6 +68,23 @@ function handleGetInfo() {
   })
 }
 
+// Function to reset game and tell server to reset data
+function resetFunction(){
+  
+  axios({
+    method: "POST",
+    url: "/reset",
+    data: {}
+  })
+  .then((response)=>{
+    roundCount = 1;
+    handleGetInfo()
+  })
+  .catch((error)=>{
+    console.log("server error", error);
+  })
+  
+}
 
 
 onReady();

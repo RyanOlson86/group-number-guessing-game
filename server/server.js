@@ -51,6 +51,12 @@ console.log("checking results:", results);
 res.sendStatus(201)
 })
 
+app.post("/reset", (req, res) => {
+  results.length = 0;
+  randomNumberResult = 0;
+  res.sendStatus(201)
+  })
+
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
 })
