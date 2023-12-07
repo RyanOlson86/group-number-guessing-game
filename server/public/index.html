@@ -5,11 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guess A Number!</title>
-  <script src="scripts/client.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script defer src="scripts/client.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>YOUR GAME HERE!</h1>
+    <h1>Guess a number 1-25!</h1>
+    <form id="formInputs" onsubmit="handleSubmit(event)">
+      <input id="nameOneInput" type="text" placeholder="Name">
+      <input id="numberOneInput" type="number" placeholder="Guess">
+      <br>
+      <input id="nameTwoInput" type="text" placeholder="Name">
+      <input id="numberTwoInput" type="number" placeholder="Guess">
+      <button id="submitButton">Submit</button>
+    </form>
+    
+    <div id="resultDiv">
+      <!-- results from get goes here -->
+    </div>
+    <div>
+      <button id="resetButton" onclick="resetFunction()">Reset</button>
+    </div>
 </body>
 </html>
